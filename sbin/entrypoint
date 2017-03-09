@@ -3,4 +3,4 @@
 # Replace config
 cat-gitlab-ci-multi-runner-config > /etc/gitlab-runner/config.toml
 
-exec gitlab-ci-multi-runner $*
+exec gitlab-ci-multi-runner run --user=gitlab-runner --working-directory=/home/gitlab-runner $*
